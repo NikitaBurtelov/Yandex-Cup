@@ -17,7 +17,7 @@ public class PalindromicFactor {
         return data;
     }
 
-    private static String fiendMinSubstring(ArrayList<String> substrings) {
+    private static String findMinSubstring(ArrayList<String> substrings) {
         String minStr = "zzz";
 
         for (String str : substrings)
@@ -26,7 +26,7 @@ public class PalindromicFactor {
         return minStr;
     }
 
-    private static ArrayList<String> fiendPalindrome(String line) {
+    private static ArrayList<String> findPalindrome(String line) {
         ArrayList<String> substrings = new ArrayList<>();
         int lengthLine = line.length() - 1;
 
@@ -42,8 +42,8 @@ public class PalindromicFactor {
 
     public static void main(String[] args) {
         String data = dataInput();
-        ArrayList<String> arrayList = fiendPalindrome(data);
+        ArrayList<String> arrayList = findPalindrome(data);
 
-        System.out.println(arrayList.size() == 0? "-1": fiendMinSubstring(arrayList));
+        System.out.println(arrayList.size() == 0? "-1": fiedMinSubstring(arrayList));
     }
 }
